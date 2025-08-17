@@ -1,3 +1,4 @@
+//redeploy
 // api/deals.js  (CommonJS, no ESM)
 module.exports = function handler(req, res) {
   if (req.method !== "GET") {
