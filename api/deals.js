@@ -1,5 +1,4 @@
-//redeploy
-// api/deals.js  (CommonJS, no ESM)
+// api/deals.js
 module.exports = function handler(req, res) {
   if (req.method !== "GET") {
     res.setHeader("Allow", ["GET"]);
@@ -10,31 +9,21 @@ module.exports = function handler(req, res) {
   const zips = String(zip).split(",").filter(Boolean);
   const base = zips.length
     ? zips
-    : ["92101", "92102", "92103", "92104", "92105", "92114", "92115", "92116"];
+    : ["92101","92102","92103","92104","92105","92114","92115","92116"];
 
   const make = (zip, store, item, price, s, d, o) => ({
-    zip,
-    store,
-    item,
-    price,
-    serviceFee: s,
-    deliveryFee: d,
-    otherFees: o,
+    zip, store, item, price,
+    serviceFee: s, deliveryFee: d, otherFees: o
   });
 
-  const out = [];
+  const data = [];
   for (const z of base) {
-    out.push(
-      make(z, "Walmart", "Water (24-pack)", 4.98, 0.35, 0.0, 0.10),
-      make(z, "Vons", "Eggs (12ct)", 3.79, 0.60, 0.50, 0.0),
-      make(z, "Target", "Diapers (Size 4)", 19.99, 2.50, 2.99, 0.50)
+    data.push(
+      make(z,"Walmart","Water (24-pack)",4.98,0.35,0.0,0.10),
+      make(z,"Vons","Eggs (12ct)",3.79,0.60,0.50,0.0),
+      make(z,"Target","Diapers (Size 4)",19.99,2.50,2.99,0.50)
     );
   }
 
-  return res.status(200).json({
-    success: true,
-    message: "HoodSignals Deals API is live!",
-    count: out.length,
-    data: out,
-  });
+  return res.status(200).json({ success: true, count: data.length, data });
 };
