@@ -1,0 +1,9 @@
+{
+  "name": "deal-hunter-api",
+  "version": "1.0.1",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "node api/scrape.mjs"
+  }
+}
