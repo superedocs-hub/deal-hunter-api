@@ -1,9 +1,9 @@
 {
   "functions": {
-    "api/*.mjs": { "runtime": "nodejs18.x" }
+    "api/*.js": { "runtime": "nodejs18.x" }
   },
   "routes": [
-    { "src": "^/$", "dest": "api/scrape.mjs" },
-    { "src": "^/api/scrape$", "dest": "api/scrape.mjs" }
+    { "src": "^/$", "dest": "api/scrape.js" },
+    { "src": "^/api/scrape$", "dest": "api/scrape.js" }
   ]
 }
