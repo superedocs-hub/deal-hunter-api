@@ -1,9 +1,10 @@
 {
-  "name": "deal-hunter-api",
-  "version": "1.0.1",
-  "type": "module",
+  "name": "hoodsignals-deals-api",
+  "version": "1.0.0",
   "private": true,
-  "scripts": {
-    "start": "node api/scrape.mjs"
+  "type": "module",
+  "dependencies": {
+    "chrome-aws-lambda": "^10.1.0",
+    "puppeteer-core": "^22.13.0"
   }
 }
