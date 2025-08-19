@@ -1,4 +1,8 @@
-// api/health.js
-export default function handler(req, res) {
-  res.status(200).json({ ok: true, route: "/api/health", time: new Date().toISOString() });
-}
+// api/health.js — CommonJS to avoid ESM issues
+module.exports = (req, res) => {
+  res.status(200).json({
+    ok: true,
+    route: "/api/health",
+    time: new Date().toISOString(),
+  });
+};
