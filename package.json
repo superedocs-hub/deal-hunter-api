@@ -1,5 +1,13 @@
 {
   "name": "deal-hunter-api",
   "version": "1.0.0",
-  "private": true
+  "description": "HoodSignals Deal Hunter API",
+  "main": "api/scrape.js",
+  "type": "module",
+  "scripts": {
+    "start": "node api/scrape.js"
+  },
+  "engines": {
+    "node": "22.x"
+  }
 }
