@@ -1,10 +1,5 @@
 {
-  "name": "hoodsignals-deals-api",
+  "name": "deal-hunter-api",
   "version": "1.0.0",
-  "private": true,
-  "type": "module",
-  "dependencies": {
-    "chrome-aws-lambda": "^10.1.0",
-    "puppeteer-core": "^22.13.0"
-  }
+  "private": true
 }
